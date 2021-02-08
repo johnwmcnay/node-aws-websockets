@@ -65,6 +65,7 @@
     <input id="input" autocomplete="off"/>
     <button>Send</button>
 </form>
+<script src="/static/javascripts/keys.js"></script>
 <script>
 
     webSocket = new WebSocket(WSS);
@@ -82,6 +83,8 @@
     });
 
     webSocket.onmessage = function(event) {
+
+        console.log(event);
 
         var msg = event.data;
 
